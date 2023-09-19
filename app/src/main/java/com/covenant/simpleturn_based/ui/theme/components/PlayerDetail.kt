@@ -43,11 +43,14 @@ fun PlayerDetail(player: Player,modifier: Modifier = Modifier) {
                     modifier = Modifier.align(Alignment.Center))
             }
             Spacer(modifier = Modifier.padding(3.dp))
-            Box(modifier = Modifier
-                .background(MaterialTheme.colorScheme.tertiary)
-                .fillMaxWidth(player.health.toFloat() / 300f)
-                .height(40.dp)){
-
+            Box {
+                Box(modifier = Modifier
+                    .background(MaterialTheme.colorScheme.tertiaryContainer)
+                    .fillMaxWidth(player.health.toFloat() / 500f)
+                    .height(40.dp)){}
+                Text(text = "${player.health.toInt()}",
+                    color = MaterialTheme.colorScheme.onTertiaryContainer,
+                    modifier = Modifier.align(Alignment.Center))
             }
 
         }
@@ -59,11 +62,16 @@ fun PlayerDetail(player: Player,modifier: Modifier = Modifier) {
             }
             Spacer(modifier = Modifier.padding(3.dp))
             Box(modifier = Modifier
-                .background(MaterialTheme.colorScheme.primary)
+                .background(MaterialTheme.colorScheme.primaryContainer)
                 .fillMaxWidth(player.armor.toFloat() / 200f)
                 .height(40.dp)){
 
+                Text(text = "${player.armor.toInt()}",
+                    color = MaterialTheme.colorScheme.onTertiaryContainer,
+                    modifier = Modifier.align(Alignment.Center))
+
             }
+
         }
     }
 
