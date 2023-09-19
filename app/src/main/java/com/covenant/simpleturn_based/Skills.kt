@@ -38,6 +38,7 @@ class Skills(val Currentplayer: Player, val opponent: Player){
     private fun timeReset(){
         Currentplayer.health = 500
         Currentplayer.armor = 200.0
+        Currentplayer.combo = 0
     }
 
     private fun erode(){
